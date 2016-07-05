@@ -1,0 +1,24 @@
+{
+  "name": "_optimized_gulp_sass-landing2top",
+  "version": "1.0.1",
+  "description": "Optimized Gulp Project",
+  "author": "Landing2Top",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "imagemin-pngquant": "^5.0.0",
+    "node-bourbon": "^4.2.8"
+  }
+}
