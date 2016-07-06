@@ -5,6 +5,7 @@
   "author": "Landing2Top",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.12.5",
     "del": "^2.2.1",
     "gulp": "^3.9.1",

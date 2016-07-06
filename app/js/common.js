@@ -26,8 +26,8 @@ $(function() {
 	});
 
 	// Google loader
-	google.charts.load("current", {packages:["calendar"]});
-	google.charts.setOnLoadCallback(drawChart);
+	// google.charts.load("current", {packages:["calendar"]});
+	// google.charts.setOnLoadCallback(drawChart);
 
 	function drawChart() {
 		var dataTable = new google.visualization.DataTable();
@@ -292,5 +292,14 @@ $(function() {
 
 		chart.draw(dataTable, options);
 	};
+
+	// pjax
+	$(document).pjax("a.logo, .mnu_left a", ".pjax-container", {
+				fragment: ".pjax-container"
+	});
+
+	// superfish
+	$(document).ready(function() { jQuery('ul.sf-menu').superfish();
+	});
 
 });

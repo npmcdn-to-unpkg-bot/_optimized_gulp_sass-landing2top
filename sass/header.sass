@@ -2,13 +2,15 @@
 @import 'vars.sass'
 @import '../app/css/reset-css.css'
 @import 'defoult'
+@import '../app/libs/superfish/css/superfish.css'
+@import 'top-bar'
 
 body
 	height: 100%
 
 .header
 	align-items: center
-	background: $color-accent url('../img/header-bg.jpg') no-repeat 12% 80%
+	background: #fff url('../img/header-bg.jpg') no-repeat 12% 80%
 	background-size: cover
 	display: flex
 	height: 100vh
@@ -28,11 +30,16 @@ body
 	font-family: 'RussoOne'
 	font-size: 38px
 	margin-bottom: 20px
-	padding: 0 15px
+	// padding: 0 15px
+
+.p
+	text-align: justify
+	margin-bottom: 20px
 
 .select
 	background: $color-accent
 	color: #222
+	padding: 0 0.3em
 
 @media only screen and (max-width : 320px)
 	/**/
