@@ -4,13 +4,15 @@
 	left: 0
 	right: 0
 	background: #222
-	color: #fff
 	padding: 5px 0
 	z-index: 10
 
 .flex
 	display: flex
 	align-items: center
+
+.relative
+	position: relative
 
 .logo
 
@@ -19,19 +21,19 @@
 	width: auto
 
 .mnu
+	position: static
+	float: none
 	margin: 0
 	margin-left: auto
-	position: relative
 	width: auto
 	li
-		background: $color-accent
-		margin-right: 2px
-	a
-		padding: 0.3em 0.5em
-		color: #222
-		text-decoration: none
-	>li>a
-		border: none
+		white-space: normal
+		position: static
+	>li
+		>ul
+			width: 220px
+			left: auto
+	
 
 @media only screen and (max-width : 768px)
 	.top-bar
