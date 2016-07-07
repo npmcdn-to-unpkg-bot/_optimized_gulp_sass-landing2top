@@ -31,20 +31,30 @@ $(function() {
 	});
 
 	// superfish
-	$('.sf-menu').superfish({
+	$(".sf-menu").superfish({
 		delay: 200,
-		speed: 'fast',
+		speed: "fast",
 		cssArrows: false
 	})
 	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
-	$("#mobile-menu").children("ul").removeClass("sf-menu")
-	.mmenu();
+	$("#mobile-menu").find("*").attr("style", "");
+	$("#mobile-menu").children("ul").removeClass("sf-menu"),
+	$("#mobile-menu").children("ul").removeClass("mnu")
+	.parent().mmenu({
+		extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
+		navbar: {
+			title: "Меню"
+		}
+	});
 
 	// toggle-mnu
 	$(".toggle-mnu").click(function() {
-  $(this).toggleClass("on");
-  $(".main-mnu").slideToggle();
-  return false;
-});
+		$(this).addClass("on");
+	});
+
+	var api = $("#mobile-menu").data("mmenu");
+	api.bind("closed", function () {
+		$(".toggle-mnu").removeClass("on");
+	});
 
 });
