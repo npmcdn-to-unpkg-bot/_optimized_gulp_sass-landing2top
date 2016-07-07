@@ -42,7 +42,7 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/pjax/jquery.pjax.js',
 		'./app/libs/superfish/js/superfish.min.js',
-		// './app/libs/google/loader.js',
+		'./app/libs/jQuery.mmenu-master/dist/js/jquery.mmenu.all.min.js',
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

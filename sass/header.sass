@@ -4,7 +4,9 @@
 @import 'defoult'
 @import '../app/libs/superfish/css/superfish.css'
 @import '../app/libs/superfish/css/megafish.css'
+@import '../app/libs/jQuery.mmenu-master/dist/css/jquery.mmenu.all.css'
 @import 'top-bar'
+@import 'toggle-mnu'
 @import 'app/libs/font-awesome-4.6.3/sass/font-awesome.sass'
 
 body
@@ -43,6 +45,11 @@ body
 	color: #222
 	padding: 0 0.3em
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.top-bar
+		display: none
 @media only screen and (max-width : 320px)
 	/**/
 	.header

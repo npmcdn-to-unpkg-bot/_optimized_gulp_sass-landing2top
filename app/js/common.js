@@ -37,6 +37,14 @@ $(function() {
 		cssArrows: false
 	})
 	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
-	$("#mobile-menu").children("ul").removeClass("sf-menu");
+	$("#mobile-menu").children("ul").removeClass("sf-menu")
+	.mmenu();
+
+	// toggle-mnu
+	$(".toggle-mnu").click(function() {
+  $(this).toggleClass("on");
+  $(".main-mnu").slideToggle();
+  return false;
+});
 
 });
