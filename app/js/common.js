@@ -31,10 +31,12 @@ $(function() {
 	});
 
 	// superfish
-	$('ul.sf-menu').superfish({
+	$('.sf-menu').superfish({
 		delay: 200,
 		speed: 'fast',
-		cssArrows: false,
-	});
+		cssArrows: false
+	})
+	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
+	$("#mobile-menu").children("ul").removeClass("sf-menu");
 
 });
