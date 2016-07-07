@@ -29,11 +29,28 @@
 	li
 		white-space: normal
 		position: static
+		background: $color-accent
+		margin-right: 2px
+		a
+			color: #222
+			border: none
+			padding: 0.4em 0.5em 
+			text-decoration: none
 	>li
 		>ul
 			width: 220px
 			left: auto
 
+.sf-menu ul li
+	background: #222
+
+.sf-menu li:hover,
+.sf-menu li.sfHover
+	background: #333
+	only transition out, not in
+	transition: none
+	a
+		color: #fff
 	
 
 @media only screen and (max-width : 768px)
