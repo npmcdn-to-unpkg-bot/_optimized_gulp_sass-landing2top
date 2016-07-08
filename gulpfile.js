@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
 		'./app/libs/modernizr/modernizr.js',
 		'./app/libs/jquery/jquery-1.11.2.min.js',
 		'./app/libs/waypoints/waypoints.min.js',
-		'./app/libs/animate/animate-css.js',
+		// './app/libs/animate/animate-css.js',
 		'./app/libs/pjax/jquery.pjax.js',
 		'./app/libs/superfish/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu-master/dist/js/jquery.mmenu.all.min.js',
