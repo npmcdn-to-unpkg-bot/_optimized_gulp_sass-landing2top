@@ -12,9 +12,14 @@
 body
 	height: 100%
 
+.sosnovyj-bor__header
+	background: #fff url('../img/sosnovyj-bor__header-bg.jpg') no-repeat 12% 80%
+
+.detskij-lager__header
+	background: #fff url('../img/camp-bg.jpg') no-repeat 12% 80%
+
 .header
 	align-items: center
-	background: #fff url('../img/header-bg.jpg') no-repeat 12% 80%
 	background-size: cover
 	display: flex
 	height: 100vh
@@ -22,6 +27,26 @@ body
 	padding: 80px 0
 	.content
 		margin-left: auto
+
+.header, .section:not([class='section footer'])
+	// border-bottom: 4px solid $color-accent
+	position: relative
+	// &::after
+	// 	position: absolute
+	// 	content: ''
+	// 	bottom: 0px
+	// 	left: 0
+	// 	right: 0
+	// 	height: 2px
+	// 	background: rgba(0,0,0, .15)
+	&::before
+		position: absolute
+		content: ''
+		bottom: 0px
+		left: 0
+		right: 0
+		height: 4px
+		background: $color-accent
 
 .content
 	background: rgba(0, 0, 0, .5)
@@ -40,7 +65,7 @@ body
 	text-align: justify
 	margin-bottom: 20px
 
-.select
+.select, .th
 	background: $color-accent
 	color: #222
 	padding: 0 0.3em
@@ -52,6 +77,8 @@ body
 		display: none
 @media only screen and (max-width : 320px)
 	/**/
+	body
+		font-size: 14px
 	.header
 		align-items: flex-start
 	.h1
