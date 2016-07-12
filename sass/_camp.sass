@@ -43,12 +43,17 @@
 
 .table
 	width: 100%
-.tr:nth-last-of-type(2n+1)
+
+.tr:nth-child(odd)
 	background: #DAE2BF
 	color: #222
-.tr:nth-last-of-type(2n)
+.tr:nth-child(even)
 	background: #E6ECD4
 	color: #222
+.tr:nth-child(odd), .tr:nth-child(even)
+	&:hover
+		background: $color-accent
+		color: #222
 
 .th
 	text-align: center
