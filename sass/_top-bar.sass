@@ -121,25 +121,32 @@
 	height: 150px
 	background-size: cover
 	font-size: 16px
-	&::before
+	&::before, &::after
 		position: absolute
 		content: ''
+	&::before
 		top: 0
 		left: 0
 		right: 0
 		bottom: 0
-		background: rgba(0,0,0,0.6)
-	
-	&:hover
+		background: rgba(0,0,0,0)
+	&::after
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		// height: 5px
+		// width: 20px
+		background: rgba(0,0,0,0)
+	&:hover, &.active
 		&::before
 			background: rgba(0,0,0, 0)
+		&::after
+			background: $color-accent
 
 	.select
 		position: relative
 		z-index: 1
-
-a.active::before
-	background: rgba(0,0,0, 0)
 
 @media only screen and (max-width : 768px)
 	.top-bar
