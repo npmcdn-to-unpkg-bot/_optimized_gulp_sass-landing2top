@@ -26,9 +26,9 @@ $(function() {
 	});
 
 	// pjax
-		$(document).pjax("a.logo, a.mnu", ".pjax-container", {
-				fragment: ".pjax-container"
-		})
+	$(document).pjax("a.logo, a.mnu", ".pjax-container", {
+		fragment: ".pjax-container"
+	})
 
 	// superfish
 	$(".sf-menu").superfish({
@@ -56,5 +56,35 @@ $(function() {
 	api.bind("closed", function () {
 		$(".toggle-mnu").removeClass("on");
 	});
+
+	// Плавная прокрутка и выделение активного меню
+	jQuery(window).scroll(function(){
+		var $sections = $('.section, .header');
+		$sections.each(function(i,el){
+			var top  = $(el).offset().top-100;
+			var bottom = top +$(el).height();
+			var scroll = $(window).scrollTop();
+			var id = $(el).attr('id');
+			if( scroll > top && scroll < bottom){
+				$('li.active').removeClass('active');
+				$('a[href="#'+id+'"]').parent('li').addClass('active');
+
+			}
+		})
+	});
+
+// $(".mnu").on("click","a", function (event) {
+//         // исключаем стандартную реакцию браузера
+//         event.preventDefault();
+ 
+//         // получем идентификатор блока из атрибута href
+//         var id  = $(this).attr('href'),
+ 
+//         // находим высоту, на которой расположен блок
+//             top = $(id).offset().top;
+         
+//         // анимируем переход к блоку, время: 800 мс
+//         $('body,html').animate({scrollTop: top}, 800);
+//     });
 
 });
