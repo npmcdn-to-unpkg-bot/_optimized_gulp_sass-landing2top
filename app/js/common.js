@@ -57,9 +57,9 @@ $(function() {
 		$(".toggle-mnu").removeClass("on");
 	});
 
-	// Плавная прокрутка и выделение активного меню
+	// Выделение активного меню
 	jQuery(window).scroll(function(){
-		var $sections = $('.section, .header');
+		var $sections = $('.section, .header, .camp__section ');
 		$sections.each(function(i,el){
 			var top  = $(el).offset().top-100;
 			var bottom = top +$(el).height();
@@ -73,18 +73,19 @@ $(function() {
 		})
 	});
 
-// $(".mnu").on("click","a", function (event) {
-//         // исключаем стандартную реакцию браузера
-//         event.preventDefault();
- 
-//         // получем идентификатор блока из атрибута href
-//         var id  = $(this).attr('href'),
- 
-//         // находим высоту, на которой расположен блок
-//             top = $(id).offset().top;
-         
-//         // анимируем переход к блоку, время: 800 мс
-//         $('body,html').animate({scrollTop: top}, 800);
-//     });
+	// Плавная прокрутка
+	// $(".mnu").on("click","a", function (event) {
+	// 	// исключаем стандартную реакцию браузера
+	// 	event.preventDefault();
+
+	// 	// получем идентификатор блока из атрибута href
+	// 	var id  = $(this).attr('href'),
+
+	// 	// находим высоту, на которой расположен блок
+	// 	top = $(id).offset().top;
+
+	// 	// анимируем переход к блоку, время: 800 мс
+	// 	$('body,html').animate({scrollTop: top}, 800);
+	// });
 
 });
