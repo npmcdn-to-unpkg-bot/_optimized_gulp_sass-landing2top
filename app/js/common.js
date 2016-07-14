@@ -59,7 +59,7 @@ $(function() {
 
 	// Выделение активного меню
 	jQuery(window).scroll(function(){
-		var $sections = $('.section, .header, .camp__section ');
+		var $sections = $('.section, .header');
 		$sections.each(function(i,el){
 			var top  = $(el).offset().top-100;
 			var bottom = top +$(el).height();
@@ -67,7 +67,9 @@ $(function() {
 			var id = $(el).attr('id');
 			if( scroll > top && scroll < bottom){
 				$('li.active').removeClass('active');
+				$('a.active').removeClass('active');
 				$('a[href="#'+id+'"]').parent('li').addClass('active');
+				$('a[href="#'+id+'"]').addClass('active');
 
 			}
 		})
