@@ -26,9 +26,7 @@ $(function() {
 	});
 
 	// pjax
-	$(document).pjax("a.logo, a.mnu", ".pjax-container", {
-		fragment: ".pjax-container"
-	})
+	$(document).pjax("a", ".pjax-container");
 
 	// superfish
 	$(".sf-menu").superfish({
