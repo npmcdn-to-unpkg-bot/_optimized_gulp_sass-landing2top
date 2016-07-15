@@ -61,93 +61,41 @@
 	color: #fff
 	padding: 15px
 
+.elem
+	display: flex
+	width: 16.26%
+	height: 150px
+	float: left
+	// padding: 5px
+	position: relative
+	align-items: center
+	margin: 0.2%
+	.icon
+		margin-left: auto
+		margin-right: auto
+		max-width: 90%
+		max-height: 90%
+		height: 80px
+		width: auto
+		font-size: 80px
+		color: #222
+	.select
+		position: absolute
+		display: inline
+		top: 0px
+		left: 0px
+		font-size: initial
+	&:hover, &.active
+		background: $color-accent
+		.select
+			background: #222
+			color: #fff
+
 .sf-mega,.mnu>li>ul
 	margin-top: -12px
 
 
-// a.camp__section
 
-
-// Фото
-.camp__section-1
-	background: #222 url('/img/camp__section-1-min.jpg') no-repeat center
-
-// Видео
-.camp__section-2
-	// background: #222 url('/img/camp__section-2-min.jpg') no-repeat center
-
-// Рассписание заездов
-.camp__section-3
-	background: #222 url('/img/camp__section-3-min.jpg') no-repeat top left
-
-// Распорядок дня
-.camp__section-4
-	background: #222 url('/img/camp__section-4-min.jpg') no-repeat top left
-
-// Выездные экскурсии
-.camp__section-5
-	// background: #222 url('/img/camp__section-5-min.jpg') no-repeat center
-
-// Условия проживания
-.camp__section-6
-	background: #222 url('/img/camp__section-6-min.jpg') no-repeat center
-
-// Питание
-.camp__section-7
-	background: #222 url('/img/camp__section-7-min.jpg') no-repeat center
-
-// Награды лагеря
-.camp__section-8
-	// background: #222 url('/img/camp__section-8-min.jpg') no-repeat center
-
-// Цены
-.camp__section-9
-	background: #222 url('/img/camp__section-9-min.jpg') no-repeat top left
-
-// Оформление
-.camp__section-10
-	background: #222 url('/img/camp__section-10-min.jpg') no-repeat top left
-
-// Что взять с собой
-.camp__section-11
-	background: #222 url('/img/camp__section-11-min.jpg') no-repeat top left
-
-// Посещение ребёнка
-.camp__section-12
-	background: #222 url('/img/camp__section-12-min.jpg') no-repeat top left
-	
-.camp__section
-	display: block
-	position: relative
-	height: 150px
-	background-size: cover
-	font-size: 16px
-	&::before, &::after
-		position: absolute
-		content: ''
-	&::before
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background: rgba(0,0,0,0)
-	&::after
-		top: 0
-		right: 0
-		left: 0
-		bottom: 0
-		// height: 5px
-		// width: 20px
-		background: rgba(0,0,0,0)
-	&:hover, &.active
-		&::before
-			background: rgba(0,0,0, 0)
-		&::after
-			background: $color-accent
-
-	.select
-		position: relative
-		z-index: 1
 
 @media only screen and (max-width : 768px)
 	.top-bar

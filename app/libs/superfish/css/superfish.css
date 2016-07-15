@@ -23,7 +23,7 @@
 }
 
 .sf-menu a {
-	display: block;
+	/*display: block;*/
 	position: relative;
 }
 .sf-menu ul ul {
