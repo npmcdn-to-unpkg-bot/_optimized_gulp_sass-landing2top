@@ -49,7 +49,6 @@ $(function() {
 	// Индикатор активной секции
 	$(".sf-menu")
 	.after("<div id='section-indicator'>").clone().appendTo("#section-indicator");
-	$("#section-indicator").find("*").attr("style", "");
 	$("#section-indicator").children("ul").removeClass("sf-menu"),
 	$("#section-indicator").children("ul").removeClass("sf-js-enabled"),
 	$("#section-indicator").children("ul").removeClass("mnu"),
