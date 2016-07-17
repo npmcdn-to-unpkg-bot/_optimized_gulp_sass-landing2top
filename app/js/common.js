@@ -52,6 +52,7 @@ $(function() {
 	$("#section-indicator").children("ul").removeClass("sf-menu"),
 	$("#section-indicator").children("ul").removeClass("sf-js-enabled"),
 	$("#section-indicator").children("ul").removeClass("mnu"),
+	$("#section-indicator").children("ul").children("li").removeClass("hidden"),
 	$("#section-indicator").children("ul").children("li").children("div").children("a").unwrap(),
 	$("#section-indicator").children("ul").children("li").children("a").unwrap(),
 	$("#section-indicator").children("ul").children("a").empty(),
