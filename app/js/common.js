@@ -77,7 +77,7 @@ $(function() {
 	jQuery(window).scroll(function(){
 		var $sections = $('.section, .header');
 		$sections.each(function(i,el){
-			var top  = $(el).offset().top-100;
+			var top  = $(el).offset().top-200;
 			var bottom = top +$(el).height();
 			var scroll = $(window).scrollTop();
 			var id = $(el).attr('id');
@@ -92,18 +92,18 @@ $(function() {
 	});
 
 	// Плавная прокрутка
-	// $(".mnu").on("click","a", function (event) {
-	// 	// исключаем стандартную реакцию браузера
-	// 	event.preventDefault();
+	$(".mnu, #section-indicator").on("click","a[href^='#']", function (event) {
+		// исключаем стандартную реакцию браузера
+		event.preventDefault();
 
-	// 	// получем идентификатор блока из атрибута href
-		// var id  = $(this).attr('href'),
+		// получем идентификатор блока из атрибута href
+		var id  = $(this).attr('href'),
 
-	// 	// находим высоту, на которой расположен блок
-	// 	top = $(id).offset().top;
+		// находим высоту, на которой расположен блок
+		top = $(id).offset().top;
 
-	// 	// анимируем переход к блоку, время: 800 мс
-	// 	$('body,html').animate({scrollTop: top}, 800);
-	// });
+		// анимируем переход к блоку, время: 800 мс
+		$('body,html').animate({scrollTop: top}, 800);
+	});
 
 });
