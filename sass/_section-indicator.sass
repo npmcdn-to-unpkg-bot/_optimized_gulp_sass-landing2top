@@ -1,0 +1,29 @@
+#section-indicator
+	position: fixed
+	top: 0
+	bottom: 0
+	right: -8px
+	display: flex
+	align-items: center
+	transition: all .3s
+	ul
+		background: url('/img/wood-pattern.jpg')
+		padding: 10px
+		border-radius: 20px 0 0 20px
+		box-shadow: -2px 2px 4px -2px #000
+		li:last-child
+			margin-bottom: 0
+	li
+		height: 20px
+		width: 20px
+		background: #222
+		border-radius: 50%
+		margin-bottom: 5px
+		box-shadow: inset 0 1px 2px 0 #000
+		a
+			display: block
+			height: 100%
+		&.active, &:hover, &:focus
+			background: $color-accent
+	&:hover
+		right: 0

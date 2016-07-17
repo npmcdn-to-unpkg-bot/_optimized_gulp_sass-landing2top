@@ -34,6 +34,7 @@ $(function() {
 		speed: "fast",
 		cssArrows: false
 	})
+	// мобильное меню
 	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
 	$("#mobile-menu").find("*").attr("style", "");
 	$("#mobile-menu").children("ul").removeClass("sf-menu"),
@@ -44,6 +45,23 @@ $(function() {
 			title: "Меню"
 		}
 	});
+
+	// Индикатор активной секции
+	$(".sf-menu")
+	.after("<div id='section-indicator'>").clone().appendTo("#section-indicator");
+	$("#section-indicator").find("*").attr("style", "");
+	$("#section-indicator").children("ul").removeClass("sf-menu"),
+	$("#section-indicator").children("ul").removeClass("sf-js-enabled"),
+	$("#section-indicator").children("ul").removeClass("mnu"),
+	$("#section-indicator").children("ul").children("li").children("div").children("a").unwrap(),
+	$("#section-indicator").children("ul").children("li").children("a").unwrap(),
+	$("#section-indicator").children("ul").children("a").empty(),
+	$("#section-indicator").children("ul").children("a").removeClass("elem"),
+	$("#section-indicator").children("ul").children("a[href^='/']").remove(),
+	$("#section-indicator").children("ul").children("a").wrap("<li>"),
+	$("#section-indicator").children("ul").children("li:first").attr({class: 'active'})
+	
+	
 
 	// toggle-mnu
 	$(".toggle-mnu").click(function() {
@@ -79,7 +97,7 @@ $(function() {
 	// 	event.preventDefault();
 
 	// 	// получем идентификатор блока из атрибута href
-	// 	var id  = $(this).attr('href'),
+		// var id  = $(this).attr('href'),
 
 	// 	// находим высоту, на которой расположен блок
 	// 	top = $(id).offset().top;
