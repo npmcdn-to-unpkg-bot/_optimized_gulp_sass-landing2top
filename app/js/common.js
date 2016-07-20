@@ -37,8 +37,7 @@ $(function() {
 	// мобильное меню
 	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
 	$("#mobile-menu").find("*").attr("style", "");
-	$("#mobile-menu").children("ul").removeClass("sf-menu"),
-	$("#mobile-menu").children("ul").removeClass("mnu")
+	$("#mobile-menu ul").removeClass("sf-menu").removeClass("mnu")
 	.parent().mmenu({
 		extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
 		navbar: {
@@ -47,20 +46,16 @@ $(function() {
 	});
 
 	// Индикатор активной секции
-	$(".sf-menu")
+	$(".mnu")
 	.after("<div id='section-indicator'>").clone().appendTo("#section-indicator");
-	$("#section-indicator").children("ul").removeClass("sf-menu"),
-	$("#section-indicator").children("ul").removeClass("sf-js-enabled"),
-	$("#section-indicator").children("ul").removeClass("mnu"),
-	$("#section-indicator").children("ul").children("li").removeClass("hidden"),
-	$("#section-indicator").children("ul").children("li").children("div").children("a").unwrap(),
-	$("#section-indicator").children("ul").children("li").children("a").unwrap(),
-	$("#section-indicator").children("ul").children("a").empty(),
-	$("#section-indicator").children("ul").children("a").removeClass("elem"),
-	$("#section-indicator").children("ul").children("a[href^='/']").remove(),
-	$("#section-indicator").children("ul").children("a").wrap("<li>"),
-	$("#section-indicator").children("ul").children("li:first").attr({class: 'active'})
-	
+	$("#section-indicator ul").removeClass("sf-menu", "sf-js-enabled", "mnu"),
+	$("#section-indicator ul li").removeClass("hidden"),
+	$("#section-indicator ul li div a").unwrap(),
+	$("#section-indicator ul li a").unwrap(),
+	$("#section-indicator ul a").empty().removeClass("elem"),
+	$("#section-indicator ul a[href^='/']").remove(),
+	$("#section-indicator ul a").wrap("<li>"),
+	$("#section-indicator ul li:first").attr({class: 'active'})
 	
 
 	// toggle-mnu
@@ -105,5 +100,23 @@ $(function() {
 		// анимируем переход к блоку, время: 800 мс
 		$('body,html').animate({scrollTop: top}, 800);
 	});
+
+	// popup videos
+	$('.popup-youtube').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
+
+	var $container = $(".gallery__elem");
+	$container.imagesLoaded(function () {
+		$container.imagefill();
+	});
+
+	// imagefill
+	// $('.gallery__elem').imagefill();
 
 });

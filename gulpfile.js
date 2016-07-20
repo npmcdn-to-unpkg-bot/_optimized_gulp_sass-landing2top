@@ -43,6 +43,9 @@ gulp.task('scripts', function() {
 		'./app/libs/pjax/jquery.pjax.js',
 		'./app/libs/superfish/js/superfish.min.js',
 		'./app/libs/jQuery.mmenu-master/dist/js/jquery.mmenu.all.min.js',
+		'./app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.js',
+		'./app/libs/imagesloaded-master/imagesloaded.pkgd.min.js',
+		'./app/libs/johnpolacek-imagefill.js-1e91a28/js/jquery-imagefill.js',
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

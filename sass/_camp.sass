@@ -26,22 +26,34 @@
 		background: #222
 
 .section__camp-1
-	background: #fff	url('../img/camp__section-1.jpg') no-repeat center
+	background: #fff	url('../img/camp__section-1.jpg') no-repeat center top
 
 .section__camp-2
-	// background: #fff	url('../img/camp__section-2.jpg') no-repeat center
+	background: #fff	url('../img/camp__section-2.jpg') no-repeat center
 
 .section__camp-3
-	background: #fff	url('../img/camp__section-3.jpg') no-repeat
+	background: #fff	url('../img/camp__section-3.jpg') no-repeat center
 
 .section__camp-4
-	background: #fff	url('../img/camp__section-4.jpg') no-repeat
+	background: #fff	url('../img/camp__section-4.jpg') no-repeat center
+
+.section__camp-6
+	background: #fff	url('../img/camp__section-6.jpg') no-repeat center
+
+.section__camp-7
+	background: #fff	url('../img/camp__section-7.jpg') no-repeat center
 
 .section__camp-9
-	background: #fff	url('../img/camp__section-9.jpg') no-repeat
+	background: #fff	url('../img/camp__section-9.jpg') no-repeat center
 
 .section__camp-10
-	background: #fff	url('../img/camp__section-10.jpg') no-repeat
+	background: #fff	url('../img/camp__section-10.jpg') no-repeat center
+
+.section__camp-11
+	background: #fff	url('../img/camp__section-11.jpg') no-repeat center
+
+.section__camp-12
+	background: #fff	url('../img/camp__section-12.jpg') no-repeat center top
 
 .scroll-wrap
 	max-height: 50vh
@@ -67,22 +79,29 @@
 	padding: 0.2em 0.5em
 
 .section__camp-4
-	// background: #fff	url('../img/camp__section-4.jpg') no-repeat center
 	td:first-of-type
 		width: 130px
-.section__camp-6
-	background: #fff	url('../img/camp__section-6.jpg') no-repeat center
-
-.section__camp-7
-	background: #fff	url('../img/camp__section-7.jpg') no-repeat center
-
-.section__camp-11
-	background: #fff	url('../img/camp__section-11.jpg') no-repeat center
-
-.section__camp-12
-	background: #fff	url('../img/camp__section-12.jpg') no-repeat center top
 
 .section__camp
 	background-size: cover
 	height: 100vh
 	min-height: 600px
+
+.popup-youtube
+	align-items: center
+	display: flex
+	float: left
+	height: 150px
+	width: 50%
+	.img
+		position: absolute
+	.select
+		opacity: 0
+		z-index: 0
+		margin-left: auto
+		margin-right: auto
+	&:hover
+		text-decoration: none
+
+		.select
+			opacity: 1
