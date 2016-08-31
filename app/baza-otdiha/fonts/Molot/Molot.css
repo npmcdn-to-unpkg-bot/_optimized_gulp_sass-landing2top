@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Molot';
+    src: local('Molot'), url('molot.woff2') format('woff2'), url('molot.woff') format('woff'), url('molot.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

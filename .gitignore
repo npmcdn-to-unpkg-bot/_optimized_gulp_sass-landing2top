@@ -1,3 +1,6 @@
-node_modules/
+*.sublime-gulp.cache
+*.sublime-project
+*.sublime-workspace
 dist/
-.sublime-gulp.cache
+node_modules/
+sublime-gulp.log

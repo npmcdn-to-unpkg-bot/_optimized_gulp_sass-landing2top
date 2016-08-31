@@ -1,4 +1,2 @@
 User-agent: *
-Disalow: *
-Sitemap: http://sosnovyj-bor.ru/sitemap.xml
-Host: sosnovyj-bor.ru.ru
+Host: bazaotdihabelgorod.ru

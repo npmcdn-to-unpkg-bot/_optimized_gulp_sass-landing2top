@@ -1,5 +1,50 @@
-.map
-	// background: #fff url('../img/camp-bg.jpg') no-repeat center center
-	// background-size: cover
+.map-section
+	background: #222 url('../img/wood-pattern.jpg')
 	height: 100vh
 	min-height: 600px
+	.container
+		align-items: flex-start
+		height: 100%
+	.st7
+		fill: $color-accent
+		stroke: #222
+		stroke-width: 3
+		cursor: pointer
+		&:hover
+			fill: #222
+			// stroke: #fff
+
+
+
+.map-wrap
+	margin-left: auto
+	margin-right: auto
+	height: 100%
+	// width: 100%
+
+.map
+	height: 100%
+	width: auto
+
+.legenda
+	.accent
+		background: $color-accent
+		&:hover
+			background: #222
+	.admin
+		background: $color-admin
+	.icon
+		display: inline-block
+		width: 25px
+		height: 20px
+		border: 1px solid #222
+		margin-bottom: -3px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.map-section
+		.container
+			display: block
